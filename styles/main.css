@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  letter-spacing: -0.011em;
 }
 
 html,
@@ -57,6 +58,7 @@ ul {
 .top-line__center {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex: 1 1 0%;
 }
 
@@ -66,4 +68,69 @@ ul {
   align-items: center;
   gap: 5px;
   width: 20%;
+}
+
+.top-mnu {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius);
+  padding: 4px;
+  /* bdf */
+}
+
+.top-mnu ul {
+  display: flex;
+  gap: 2px;
+}
+
+.top-mnu a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 120%;
+  height: 52px;
+  padding: 0 17.5px;
+  border-radius: var(--radius);
+  min-width: 100px;
+}
+
+.top-mnu a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: scaleX(0.925);
+  transition: var(--transition);
+  opacity: 0;
+}
+
+.top-mnu a::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--gradient-1);
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.top-mnu a:hover::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.top-mnu a:hover::after {
+  opacity: 0.5;
+}
+
+.logo,
+.top-mnu,
+.mnu-button {
+  pointer-events: auto;
 }

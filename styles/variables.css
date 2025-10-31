@@ -14,4 +14,14 @@
   --color-gradient-5: #e83ec5;
   --color-gradient-6: #ea3fc4;
   --color-gradient-7: #c6b6ee;
+
+  --gradient-base: var(--color-gradient-1) 2%, var(--color-gradient-1) 18%,
+    var(--color-gradient-1) 20%, var(--color-gradient-2) 35%,
+    var(--color-gradient-3) 50%, var(--color-gradient-4) 70%,
+    var(--color-gradient-5) 90%, var(--color-gradient-6) 90%;
+
+  --gradient-1: linear-gradient(270deg, var(--gradient-base));
+
+  --transition: all 0.5s;
+  --radius: 8px;
 }
