@@ -30,3 +30,40 @@ ul {
   padding: 0;
   margin: 0;
 }
+
+.header-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.top-line {
+  display: flex;
+  gap: 50px;
+}
+
+.top-line__left {
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+
+.top-line__center {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 0%;
+}
+
+.top-line__right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+  width: 20%;
+}
