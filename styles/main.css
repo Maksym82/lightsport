@@ -103,6 +103,7 @@ ul {
   transform: scaleX(0.925);
   transition: var(--transition);
   opacity: 0;
+  border-radius: var(--radius);
 }
 
 .top-mnu a::after {
@@ -133,4 +134,34 @@ ul {
 .top-mnu,
 .mnu-button {
   pointer-events: auto;
+}
+
+.main-menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.mnu-button__menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  /* bdf */
+}
+
+.mnu-button__menu span {
+  display: block;
+  background-color: var(--white);
+  width: 22px;
+  height: 2px;
+  border-radius: var(--radius);
 }
