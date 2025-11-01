@@ -9,8 +9,10 @@ if (burgerMenu) {
 
     if (burgerMenu.classList.contains("active")) {
       menuBackground.classList.add("active");
+      mainMenu.classList.add("active");
     } else {
       menuBackground.classList.remove("active");
+      mainMenu.classList.remove("active");
     }
   });
 }

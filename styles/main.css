@@ -137,8 +137,69 @@ ul {
 
 .main-menu {
   position: fixed;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  z-index: 7;
+  width: 815px;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  transform-origin: right top;
+  border-radius: 10px;
+  pointer-events: auto;
+  transform: scale(0) translate(0, 0) rotate(0.001deg);
   opacity: 0;
   visibility: hidden;
+  transition: var(--transition-mnu);
+}
+
+.main-menu.active {
+  transform: scale(1) translate(0, 0) rotate(0.001deg);
+  opacity: 1;
+  visibility: visible;
+}
+
+.main-menu__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
+  min-height: 100%;
+  padding: 76px 40px 80px;
+}
+
+.main-menu__inner li {
+  position: relative;
+}
+
+.main-menu__inner li a {
+  position: relative;
+  display: block;
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 143%;
+  transition: var(--transition);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-menu__inner a span {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 100%;
+  transform-origin: right;
+  transform: scale(0);
+  transition: transform 0.5s;
+  background: var(--gradient-1);
+  opacity: 0.6;
+}
+
+.main-menu__inner a:hover span {
+  transform-origin: left;
+  transform: scale(1);
 }
 
 .mnu-button__menu {
