@@ -16,3 +16,26 @@ if (burgerMenu) {
     }
   });
 }
+
+gsap.utils.toArray("[data-parallax-wrapper]").forEach((container) => {
+  const img = container.querySelector("[data-parallax-target]");
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: container,
+      scrub: true,
+    },
+  });
+
+  tl.fromTo(
+    img,
+    {
+      yPercent: -15,
+      ease: "none",
+    },
+    {
+      yPercent: 15,
+      ease: "none",
+    }
+  );
+});
