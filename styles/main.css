@@ -32,6 +32,16 @@ ul {
   margin: 0;
 }
 
+.container {
+  width: calc(1360px + 30px);
+  max-width: 100%;
+  padding-top: 110px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .header-top {
   position: fixed;
   top: 0;
@@ -290,4 +300,22 @@ ul {
 .main-menu-background.active {
   opacity: 1;
   visibility: visible;
+}
+
+.accordion {
+  display: flex;
+  gap: 20px;
+}
+
+.accordion__col {
+  position: relative;
+  z-index: 1;
+  height: 82vh;
+  overflow: hidden;
+  border-radius: 20px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  min-width: 210px;
+  cursor: pointer;
 }
