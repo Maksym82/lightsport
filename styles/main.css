@@ -412,8 +412,13 @@ ul {
   font-size: 20px;
   line-height: 140%;
   opacity: 0;
+  transform: translate(0, 20%);
+  transition: var(--transition);
+  transition-duration: 1s;
+  font-kerning: none;
 }
 
 .accordion__col.active .accordion__description {
   opacity: 0.8;
+  transform: translate(0, 0);
 }
