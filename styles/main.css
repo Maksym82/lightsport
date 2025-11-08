@@ -1,6 +1,7 @@
 @import url(./fonts.css);
 @import url(./animations.css);
 @import url(./variables.css);
+@import url(../vendor/lenis/lenis.css);
 
 * {
   margin: 0;
