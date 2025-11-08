@@ -572,3 +572,15 @@ ul {
     margin-top: 65px;
   }
 }
+
+@media (max-width: 575.98px) {
+  .section-head {
+    flex-direction: column;
+  }
+  .gallery__wrapper {
+    grid-template-columns: auto;
+  }
+  .main-menu__inner li a {
+    font-size: 45px;
+  }
+}
