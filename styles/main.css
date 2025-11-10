@@ -33,6 +33,15 @@ ul {
   margin: 0;
 }
 
+.pattern {
+  content: "";
+  position: fixed;
+  z-index: 1000;
+  pointer-events: none;
+  background: url(../assets/images/noise.png);
+  opacity: 0.02;
+}
+
 .gradient-bg {
   position: fixed;
   inset: 0;
@@ -117,10 +126,11 @@ ul {
     no-repeat;
   width: 100%;
   height: 100%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
 }
 
 .container {
-  opacity: 0;
   width: calc(1360px + 30px);
   max-width: 100%;
   padding-top: 110px;
